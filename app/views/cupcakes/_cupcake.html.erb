@@ -1,0 +1,32 @@
+<div id="<%= dom_id cupcake %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= cupcake.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Price:</strong>
+    <%= cupcake.price %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= cupcake.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Photo url:</strong>
+    <%= cupcake.photo_url %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Flavor:</strong>
+    <%= cupcake.flavor %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this cupcake", cupcake, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this cupcake', edit_cupcake_path(cupcake), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
